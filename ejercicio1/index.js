@@ -20,7 +20,7 @@ const getCharacters = (data) => {
     const option = selectElement.appendChild(document.createElement("option"));
     option.setAttribute('value', character.id)
     option.innerHTML = `
-     ${character.firstName} ${character.lastName}
+     ${character.fullName}
     `;
   });
 };
@@ -29,8 +29,10 @@ const showImage = (data) => {
   selectElement.addEventListener('change', (event) => {
     const selectedId = event.target.value;
     const selectedItem = data.find(character => character.id === parseInt(selectedId));
+    console.log(selectedItem);
     if (selectedItem) {
       imgContainer.setAttribute('src', selectedItem.imageUrl);
+      imgContainer.setAttribute('alt', selectedItem.title);
     }
   })
 };

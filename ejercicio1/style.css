@@ -1,22 +1,53 @@
 body {
-  background-image: url('GoT__bg.jpg');
+  background-image: url('images/GoT__bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #030303;
 }
 
+figure {
+  margin: 0;
+}
+
+figure img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
 .character-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	min-width: 200px;
-	height: auto;
-	background: #000000ab;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	justify-content: center;
-	padding: 1em;
-	border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 200px;
+  height: auto;
+  background: #000000ab;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  justify-content: center;
+  padding: 1em;
+  border-radius: 10px;
   gap: 10px;
+  flex-direction: column;
+}
+
+.character-wrapper .GoT__logo {
+  max-width: 300px;
+  margin: 0 auto;	
+}
+
+.character-wrapper h4 {
+	margin: 0;
+	color: white;
+	font-family: sans-serif;
+	font-weight: 300;
+	margin-bottom: .5rem;
+}
+
+.character-wrapper select {
+	background: #43434333;
+	color: #ffffff;
+	font-size: 1.5rem;
+	padding: .5rem;
 }
